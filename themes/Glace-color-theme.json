@@ -1,10 +1,49 @@
 {
   "name": "Glace",
   "colors": {
-    "editor.background": "#263238",
-    "editor.foreground": "#eeffff",
+    "tab.inactiveBackground": "#1a1e24",
+    "editorGroupHeader.tabsBackground": "#1a1e24",
+
+    "activityBar.background": "#22272f",
+    "editor.background": "#22272f",
+    "sideBar.background": "#22272f",
+    "tab.activeBackground": "#22272f",
+    "sideBarSectionHeader.background": "#22272f",
+    "statusBar.background": "#22272f",
+    "statusBarItem.remoteBackground": "#22272f",
+    "titleBar.activeBackground": "#22272f",
+
+    "tab.hoverBackground": "#2c323c",
+    "list.hoverBackground": "#2c323c",
+    "list.inactiveSelectionBackground": "#2c323c",
+    "statusBarItem.hoverBackground": "#2c323c",
+
+    "toolbar.hoverBackground": "#343b46",
+    "list.activeSelectionBackground": "#343b46",
+
+    "activityBar.inactiveForeground": "#727d8e",
+
+    "statusBar.foreground": "#a9b4c5",
+    "statusBarItem.remoteForeground": "#a9b4c5",
+
+    "sideBar.foreground": "#ffffff",
+
+    "activityBar.border": "#171b21",
+    "titleBar.border": "#171b21",
+    "sideBar.border": "#171b21",
+    "sideBarSectionHeader.border": "#1b1f23",
+    "editorGroupHeader.tabsBorder": "#1b1f23",
+    "tab.border": "#1b1f23",
+    "statusBar.border": "#1b1f23",
+
     "activityBarBadge.background": "#007acc",
-    "sideBarTitle.foreground": "#bbbbbb"
+
+    "activityBar.activeBorder": "#7371FC",
+    "activityBar.activeFocusBorder": "#5553EA",
+
+    "list.errorForeground": "#ff0000",
+
+    "list.warningForeground": "#d9ff00"
   },
   "tokenColors": [
     {
