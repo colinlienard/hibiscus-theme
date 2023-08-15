@@ -1,0 +1,21 @@
+{
+  "name": "glace",
+  "displayName": "Glace",
+  "description": "A glace theme",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.81.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Glace",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Glace-color-theme.json"
+      }
+    ]
+  }
+}
