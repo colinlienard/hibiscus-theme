@@ -1,5 +1,6 @@
 {
   "name": "glace",
+  "type": "module",
   "displayName": "Glace",
   "description": "A glace theme",
   "version": "0.0.1",
@@ -17,5 +18,11 @@
         "path": "./themes/Glace-color-theme.json"
       }
     ]
+  },
+  "scripts": {
+    "format": "node format && prettier --write ."
+  },
+  "devDependencies": {
+    "prettier": "^3.0.2"
   }
 }
