@@ -15,14 +15,20 @@
       {
         "label": "Glace",
         "uiTheme": "vs-dark",
-        "path": "./themes/Glace-color-theme.json"
+        "path": "./themes/generated.json"
       }
     ]
   },
   "scripts": {
-    "format": "node format && prettier --write ."
+    "build": "ts-node src",
+    "watch": "nodemon --watch src --exec 'pnpm build'",
+    "format": "prettier --write ."
   },
   "devDependencies": {
-    "prettier": "^3.0.2"
+    "@types/node": "^20.5.2",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
   }
 }
