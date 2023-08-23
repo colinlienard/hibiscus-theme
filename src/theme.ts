@@ -167,29 +167,27 @@ export function getTheme(name: string) {
       // 'editorGutter.addedBackground': ui.debug,
       // 'editorGutter.deletedBackground': ui.debug,
 
-      // 'diffEditor.insertedLineBackground': lightDark(alpha(scale.green[1], 0.3), alpha(scale.green[5], 0.15)),
-      // 'diffEditor.insertedTextBackground': lightDark(alpha(scale.green[2], 0.5), alpha(scale.green[3], 0.3)),
-      // 'diffEditor.removedLineBackground': lightDark(alpha(scale.red[1], 0.3), alpha(scale.red[5], 0.15)),
-      // 'diffEditor.removedTextBackground': lightDark(alpha(scale.red[3], 0.4), alpha(scale.red[3], 0.3)),
+      'diffEditor.insertedTextBackground': alpha(ui.green, 30),
+      'diffEditor.removedTextBackground': alpha(ui.red, 30),
 
-      // 'scrollbar.shadow': alpha(scale.gray[5], 0.2),
-      // 'scrollbarSlider.background': lightDark(alpha(scale.gray[4], 0.2), alpha(scale.gray[3], 0.2)),
-      // 'scrollbarSlider.hoverBackground': lightDark(alpha(scale.gray[4], 0.24), alpha(scale.gray[3], 0.24)),
-      // 'scrollbarSlider.activeBackground': lightDark(alpha(scale.gray[4], 0.28), alpha(scale.gray[3], 0.28)),
-      // 'editorOverviewRuler.border': lightDark(scale.white, scale.black),
+      'scrollbar.shadow': ui.transparent,
+      'scrollbarSlider.background': alpha(ui.backgroundBrighter, 50),
+      'scrollbarSlider.hoverBackground': alpha(ui.backgroundBrighter, 70),
+      'scrollbarSlider.activeBackground': alpha(ui.backgroundBrighter, 90),
+      'editorOverviewRuler.border': ui.border,
 
       // 'minimapSlider.background': lightDark(alpha(scale.gray[4], 0.2), alpha(scale.gray[3], 0.2)),
       // 'minimapSlider.hoverBackground': lightDark(alpha(scale.gray[4], 0.24), alpha(scale.gray[3], 0.24)),
       // 'minimapSlider.activeBackground': lightDark(alpha(scale.gray[4], 0.28), alpha(scale.gray[3], 0.28)),
 
-      // 'panel.background': color.canvas.inset,
-      // 'panel.border': color.border.default,
-      // 'panelTitle.activeBorder': color.primer.border.active,
-      // 'panelTitle.activeForeground': color.fg.default,
-      // 'panelTitle.inactiveForeground': color.fg.muted,
-      // 'panelInput.border': color.border.default,
+      'panel.background': ui.background,
+      'panel.border': ui.border,
+      'panelTitle.activeBorder': ui.primary,
+      'panelTitle.activeForeground': ui.foregroundLight,
+      'panelTitle.inactiveForeground': ui.foreground,
+      'panelInput.border': ui.borderLight,
 
-      // 'debugIcon.breakpointForeground': color.danger.fg,
+      // 'debugIcon.breakpointForeground': ui.debug,
 
       // 'debugConsole.infoForeground': lightDark(scale.gray[6], scale.gray[3]),
       // 'debugConsole.warningForeground': lightDark(scale.yellow[6], scale.yellow[3]),
@@ -256,21 +254,18 @@ export function getTheme(name: string) {
       // 'terminal.ansiBrightCyan': color.ansi.cyanBright,
       // 'terminal.ansiBrightWhite': color.ansi.whiteBright,
 
-      // 'editorBracketHighlight.foreground1': lightDark(scale.blue[5], scale.blue[2]),
-      // 'editorBracketHighlight.foreground2': lightDark(scale.green[5], scale.green[2]),
-      // 'editorBracketHighlight.foreground3': lightDark(scale.yellow[5], scale.yellow[2]),
-      // 'editorBracketHighlight.foreground4': lightDark(scale.red[5], scale.red[2]),
-      // 'editorBracketHighlight.foreground5': lightDark(scale.pink[5], scale.pink[2]),
-      // 'editorBracketHighlight.foreground6': lightDark(scale.purple[5], scale.purple[2]),
-      // 'editorBracketHighlight.unexpectedBracket.foreground': color.fg.muted, // gray
+      'editorBracketHighlight.foreground1': ui.blue,
+      'editorBracketHighlight.foreground2': ui.yellow,
+      'editorBracketHighlight.foreground3': ui.green,
+      'editorBracketHighlight.unexpectedBracket.foreground': ui.foregroundDark,
 
-      // 'gitDecoration.addedResourceForeground': color.success.fg,
-      // 'gitDecoration.modifiedResourceForeground': color.attention.fg,
-      // 'gitDecoration.deletedResourceForeground': color.danger.fg,
-      // 'gitDecoration.untrackedResourceForeground': color.success.fg,
-      // 'gitDecoration.ignoredResourceForeground': color.fg.subtle,
-      // 'gitDecoration.conflictingResourceForeground': color.severe.fg,
-      // 'gitDecoration.submoduleResourceForeground': color.fg.muted,
+      'gitDecoration.addedResourceForeground': ui.green,
+      'gitDecoration.modifiedResourceForeground': ui.blue,
+      'gitDecoration.deletedResourceForeground': ui.red,
+      'gitDecoration.untrackedResourceForeground': ui.green2,
+      'gitDecoration.ignoredResourceForeground': ui.foregroundDark,
+      // 'gitDecoration.conflictingResourceForeground': ui.debug,
+      // 'gitDecoration.submoduleResourceForeground': ui.debug,
 
       // 'debugToolBar.background': color.canvas.overlay,
       // 'editor.stackFrameHighlightBackground': color.attention.muted,
@@ -283,8 +278,8 @@ export function getTheme(name: string) {
 
       // 'settings.headerForeground': color.fg.default,
       // 'settings.modifiedItemIndicator': color.attention.muted,
-      // 'welcomePage.buttonBackground': color.btn.bg,
-      // 'welcomePage.buttonHoverBackground': color.btn.hoverBg,
+      'welcomePage.buttonBackground': ui.primary,
+      'welcomePage.buttonHoverBackground': ui.primaryDark,
     },
     semanticHighlighting: true,
     tokenColors: [
@@ -674,4 +669,8 @@ export function getTheme(name: string) {
       },
     ],
   };
+}
+
+function alpha(color: string, alpha: number) {
+  return `${color}${alpha}`;
 }

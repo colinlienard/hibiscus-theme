@@ -27,6 +27,8 @@ export const ui = {
   blue: '#69beff',
   yellow: '#fff761',
   red: '#cb7676',
+  green: '#56df7f',
+  green2: '#3cc364',
 
   transparent: '#00000000',
   debug: '#2fff00',
@@ -34,14 +36,14 @@ export const ui = {
 
 export const code = {
   foreground: '#ffffff',
-  comment: '#758575dd',
-  string: '#c98a7d',
-  variable: '#bd976a',
-  keyword: '#4d9375',
+  comment: '#707070',
+  string: '#e3aa46',
+  variable: '#c99cfd',
+  keyword: '#e0573b',
   number: '#4C9A91',
   boolean: '#4d9375',
   operator: '#cb7676',
-  function: '#80a665',
+  function: '#8265a6',
   constant: '#c99076',
   class: '#7f8ac7',
   interface: '#5d99a9',
@@ -49,7 +51,7 @@ export const code = {
   builtin: '#cb7676',
   property: '#b8a965',
   namespace: '#db889a',
-  punctuation: '#666666',
+  punctuation: '#959595',
   decorator: '#bd8f8f',
   regex: '#c4704f',
 };
