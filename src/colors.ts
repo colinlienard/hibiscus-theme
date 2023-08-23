@@ -1,17 +1,35 @@
 export const ui = {
+  primaryDark: '#5553EA',
   primary: '#6040FF',
-  darkPrimary: '#5553EA',
-  lightPrimary: '#8585FF',
+  primaryLight: '#8585FF',
+  primaryLighter: '#acacff',
 
+  secondaryDark: '#FF4081',
+  secondary: '#68b894',
+  secondaryLight: '#FF4081',
+  secondaryLighter: '#FF4081',
+
+  backgroundDark: '#111111',
   background: '#1A1A1A',
-  activeBackground: '#373e49',
+  backgroundLight: '#292929',
+  backgroundLighter: '#353535',
+  backgroundBright: '#3f3f3f',
+  backgroundBrighter: '#3f3f3f',
 
   border: '#262626',
-  activeBorder: '#3f4652',
+  borderLight: '#363636',
+  borderLighter: '#5d5d5d',
 
-  foreground: '#a9b4c5',
-  activeForeground: '#ffffff',
-  inactiveForeground: '#888888',
+  foregroundDark: '#6c6c6c',
+  foreground: '#c4c4c4',
+  foregroundLight: '#ffffff',
+
+  blue: '#69beff',
+  yellow: '#fff761',
+  red: '#cb7676',
+
+  transparent: '#00000000',
+  debug: '#2fff00',
 };
 
 export const code = {
