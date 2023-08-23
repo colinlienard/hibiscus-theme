@@ -1,4 +1,4 @@
-import { ui, code } from './colors.ts';
+import { ui, code } from './colors';
 
 export function getTheme(name: string) {
   return {

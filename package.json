@@ -1,15 +1,17 @@
 {
   "name": "glace",
-  "type": "module",
   "displayName": "Glace",
-  "description": "A glace theme",
   "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.81.0"
-  },
+  "description": "A glace theme",
   "categories": [
     "Themes"
   ],
+  "type": "module",
+  "scripts": {
+    "build": "tsx src",
+    "format": "prettier --write .",
+    "watch": "tsx watch src"
+  },
   "contributes": {
     "themes": [
       {
@@ -19,16 +21,12 @@
       }
     ]
   },
-  "scripts": {
-    "build": "ts-node src",
-    "watch": "nodemon --watch src --exec 'pnpm build'",
-    "format": "prettier --write ."
-  },
   "devDependencies": {
     "@types/node": "^20.5.2",
-    "nodemon": "^3.0.1",
     "prettier": "^3.0.2",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.1.6"
+    "tsx": "^3.12.7"
+  },
+  "engines": {
+    "vscode": "^1.81.0"
   }
 }
