@@ -254,9 +254,9 @@ export function getTheme(name: string) {
       // 'terminal.ansiBrightCyan': color.ansi.cyanBright,
       // 'terminal.ansiBrightWhite': color.ansi.whiteBright,
 
-      'editorBracketHighlight.foreground1': ui.blue,
-      'editorBracketHighlight.foreground2': ui.yellow,
-      'editorBracketHighlight.foreground3': ui.green,
+      'editorBracketHighlight.foreground1': code.boolean,
+      'editorBracketHighlight.foreground2': code.keyword,
+      'editorBracketHighlight.foreground3': code.string,
       'editorBracketHighlight.unexpectedBracket.foreground': ui.foregroundDark,
 
       'gitDecoration.addedResourceForeground': ui.green,
@@ -369,9 +369,15 @@ export function getTheme(name: string) {
         },
       },
       {
-        scope: ['punctuation.definition.string', 'punctuation.support.type.property-name'],
+        scope: ['punctuation.definition.string'],
         settings: {
           foreground: code.string,
+        },
+      },
+      {
+        scope: ['punctuation.support.type.property-name'],
+        settings: {
+          foreground: code.property,
         },
       },
       {
@@ -486,7 +492,6 @@ export function getTheme(name: string) {
         scope: 'string.regexp constant.character.escape',
         settings: {
           // foreground: code.yellow,
-          foreground: code.boolean,
         },
       },
       {
@@ -516,20 +521,20 @@ export function getTheme(name: string) {
       {
         scope: 'meta.module-reference',
         settings: {
-          foreground: ui.primary,
+          // foreground: code.primary,
         },
       },
       {
         scope: 'punctuation.definition.list.begin.markdown',
         settings: {
-          foreground: code.punctuation,
+          // foreground: code.orange,
         },
       },
       {
         scope: ['markup.heading', 'markup.heading entity.name'],
         settings: {
           fontStyle: 'bold',
-          foreground: ui.primary,
+          // foreground: primary,
         },
       },
       {
@@ -555,7 +560,7 @@ export function getTheme(name: string) {
       {
         scope: 'markup.raw',
         settings: {
-          foreground: ui.primary,
+          // foreground: primary,
         },
       },
       {
@@ -645,7 +650,7 @@ export function getTheme(name: string) {
       {
         scope: ['markup.underline.link.markdown'],
         settings: {
-          foreground: code.foreground,
+          // foreground: secondaryForeground,
           fontStyle: 'underline',
         },
       },
