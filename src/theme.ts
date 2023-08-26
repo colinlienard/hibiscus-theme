@@ -9,24 +9,24 @@ export function getTheme(name: string) {
       descriptionForeground: ui.foreground,
       // errorForeground: ui.debug,
 
-      'textLink.foreground': ui.primaryLight,
-      'textLink.activeForeground': ui.primaryLighter,
+      'textLink.foreground': ui.secondary,
+      'textLink.activeForeground': ui.secondaryLight,
       // 'textBlockQuote.background': ui.debug,
       // 'textBlockQuote.border': ui.debug,
       'textCodeBlock.background': ui.backgroundLighter,
       // 'textPreformat.foreground': ui.debug,
       // 'textSeparator.foreground': ui.debug,
 
-      'icon.foreground': ui.foregroundDark,
+      'icon.foreground': ui.foreground,
       // 'keybindingLabel.foreground': ui.debug,
 
       'button.background': ui.primary,
       'button.foreground': ui.foregroundLight,
-      'button.hoverBackground': ui.primaryDark,
+      'button.hoverBackground': ui.primaryLight,
 
-      // 'button.secondaryBackground': ui.debug,
-      // 'button.secondaryForeground': ui.debug,
-      // 'button.secondaryHoverBackground': ui.debug,
+      'button.secondaryBackground': ui.debug,
+      'button.secondaryForeground': ui.debug,
+      'button.secondaryHoverBackground': ui.debug,
 
       // 'checkbox.background': ui.debug,
       // 'checkbox.border': ui.debug,
@@ -41,7 +41,7 @@ export function getTheme(name: string) {
       'input.foreground': ui.foreground,
       'input.placeholderForeground': ui.foregroundDark,
 
-      'badge.foreground': ui.background,
+      'badge.foreground': ui.foregroundDarker,
       'badge.background': ui.secondary,
 
       // 'progressBar.background': ui.debug,
@@ -52,11 +52,11 @@ export function getTheme(name: string) {
       'titleBar.inactiveBackground': ui.background,
       'titleBar.border': ui.border,
 
-      'activityBar.foreground': ui.foreground,
+      'activityBar.foreground': ui.foregroundLight,
       'activityBar.inactiveForeground': ui.foregroundDark,
       'activityBar.background': ui.background,
-      'activityBarBadge.foreground': ui.foregroundLight,
-      'activityBarBadge.background': ui.primary,
+      'activityBarBadge.foreground': ui.foregroundDarker,
+      'activityBarBadge.background': ui.secondary,
       'activityBar.activeBorder': ui.primary,
       'activityBar.border': ui.border,
 
@@ -87,7 +87,7 @@ export function getTheme(name: string) {
       'notifications.background': ui.background,
       'notifications.border': ui.border,
       'notificationsErrorIcon.foreground': ui.red,
-      'notificationsWarningIcon.foreground': ui.yellow,
+      'notificationsWarningIcon.foreground': ui.orange,
       'notificationsInfoIcon.foreground': ui.blue,
 
       'pickerGroup.border': ui.border,
@@ -113,10 +113,10 @@ export function getTheme(name: string) {
       'editorGroupHeader.tabsBorder': ui.border,
       'editorGroup.border': ui.border,
 
-      'tab.activeForeground': ui.foregroundLight,
+      'tab.activeForeground': ui.foreground,
       'tab.inactiveForeground': ui.foreground,
       'tab.inactiveBackground': ui.background,
-      'tab.activeBackground': ui.background,
+      'tab.activeBackground': ui.backgroundLight,
       'tab.hoverBackground': ui.backgroundLight,
       // 'tab.unfocusedHoverBackground': ui.debug,
       'tab.border': ui.border,
@@ -125,6 +125,7 @@ export function getTheme(name: string) {
       // 'tab.unfocusedActiveBorder': ui.debug,
       'tab.activeBorderTop': ui.primary,
 
+      'breadcrumb.background': ui.backgroundLight,
       'breadcrumb.foreground': ui.foregroundDark,
       'breadcrumb.focusForeground': ui.foreground,
       'breadcrumb.activeSelectionForeground': ui.foregroundLight,
@@ -136,20 +137,20 @@ export function getTheme(name: string) {
       // 'editor.foldBackground': ui.debug,
       'editor.lineHighlightBackground': ui.backgroundLight,
       'editor.lineHighlightBorder': ui.transparent,
-      'editorLineNumber.foreground': ui.foregroundDark,
+      'editorLineNumber.foreground': ui.foregroundDarker,
       'editorLineNumber.activeForeground': ui.foreground,
       'editorIndentGuide.background': ui.borderLight,
       'editorIndentGuide.activeBackground': ui.borderLighter,
-      'editorWhitespace.foreground': ui.foregroundDark,
+      'editorWhitespace.foreground': ui.foregroundDarker,
       'editorCursor.foreground': ui.foreground,
 
-      'editor.findMatchBackground': ui.backgroundBrighter,
+      'editor.findMatchBackground': ui.backgroundBright,
       'editor.findMatchHighlightBackground': ui.backgroundBright,
       // 'editor.linkedEditingBackground': ui.debug,
       // 'editor.inactiveSelectionBackground': ui.debug,
       'editor.selectionBackground': ui.backgroundLighter,
       'editor.selectionHighlightBackground': ui.backgroundLighter,
-      'editor.wordHighlightBackground': ui.backgroundBrighter,
+      'editor.wordHighlightBackground': ui.backgroundBright,
       'editor.wordHighlightBorder': ui.transparent,
       'editor.wordHighlightStrongBackground': ui.backgroundLighter,
       'editor.wordHighlightStrongBorder': ui.borderLighter,
@@ -163,17 +164,17 @@ export function getTheme(name: string) {
       // 'editorInlayHint.paramBackground': ui.debug,
       // 'editorInlayHint.paramForeground': ui.debug,
 
-      // 'editorGutter.modifiedBackground': ui.debug,
-      // 'editorGutter.addedBackground': ui.debug,
-      // 'editorGutter.deletedBackground': ui.debug,
+      'editorGutter.modifiedBackground': ui.blue,
+      'editorGutter.addedBackground': ui.green,
+      'editorGutter.deletedBackground': ui.red,
 
       'diffEditor.insertedTextBackground': alpha(ui.green, 30),
       'diffEditor.removedTextBackground': alpha(ui.red, 30),
 
       'scrollbar.shadow': ui.transparent,
-      'scrollbarSlider.background': alpha(ui.backgroundBrighter, 50),
-      'scrollbarSlider.hoverBackground': alpha(ui.backgroundBrighter, 70),
-      'scrollbarSlider.activeBackground': alpha(ui.backgroundBrighter, 90),
+      'scrollbarSlider.background': alpha(ui.backgroundBright, 50),
+      'scrollbarSlider.hoverBackground': alpha(ui.backgroundBright, 70),
+      'scrollbarSlider.activeBackground': alpha(ui.backgroundBright, 90),
       'editorOverviewRuler.border': ui.border,
 
       // 'minimapSlider.background': lightDark(alpha(scale.gray[4], 0.2), alpha(scale.gray[3], 0.2)),
@@ -254,18 +255,25 @@ export function getTheme(name: string) {
       // 'terminal.ansiBrightCyan': color.ansi.cyanBright,
       // 'terminal.ansiBrightWhite': color.ansi.whiteBright,
 
-      'editorBracketHighlight.foreground1': code.boolean,
-      'editorBracketHighlight.foreground2': code.keyword,
-      'editorBracketHighlight.foreground3': code.string,
+      'editorBracketHighlight.foreground1': code.type,
+      'editorBracketHighlight.foreground2': code.builtin,
+      'editorBracketHighlight.foreground3': code.variable,
       'editorBracketHighlight.unexpectedBracket.foreground': ui.foregroundDark,
+
+      'editorError.foreground': ui.red,
+      'editorWarning.foreground': ui.orange,
+      'editorInfo.foreground': ui.blue,
+      'editorHint.foreground': ui.green,
 
       'gitDecoration.addedResourceForeground': ui.green,
       'gitDecoration.modifiedResourceForeground': ui.blue,
       'gitDecoration.deletedResourceForeground': ui.red,
-      'gitDecoration.untrackedResourceForeground': ui.green2,
+      'gitDecoration.renamedResourceForeground': ui.lightgreen,
+      'gitDecoration.stageDeletedResourceForeground': ui.beige,
+      'gitDecoration.untrackedResourceForeground': ui.debug,
       'gitDecoration.ignoredResourceForeground': ui.foregroundDark,
-      // 'gitDecoration.conflictingResourceForeground': ui.debug,
-      // 'gitDecoration.submoduleResourceForeground': ui.debug,
+      'gitDecoration.conflictingResourceForeground': ui.orange,
+      'gitDecoration.submoduleResourceForeground': ui.debug,
 
       // 'debugToolBar.background': color.canvas.overlay,
       // 'editor.stackFrameHighlightBackground': color.attention.muted,
@@ -279,7 +287,7 @@ export function getTheme(name: string) {
       // 'settings.headerForeground': color.fg.default,
       // 'settings.modifiedItemIndicator': color.attention.muted,
       'welcomePage.buttonBackground': ui.primary,
-      'welcomePage.buttonHoverBackground': ui.primaryDark,
+      'welcomePage.buttonHoverBackground': ui.primaryLight,
     },
     semanticHighlighting: true,
     tokenColors: [
@@ -315,97 +323,92 @@ export function getTheme(name: string) {
         },
       },
       {
-        scope: ['constant', 'entity.name.constant', 'variable.language', 'meta.definition.variable'],
+        scope: [
+          'constant',
+          'entity.name.constant',
+          'variable.language',
+          'meta.definition.variable',
+          'entity.other.attribute-name',
+          'variable.other.constant',
+          'support.constant',
+        ],
         settings: {
           foreground: code.constant,
         },
       },
       {
-        scope: ['entity', 'entity.name'],
+        scope: ['entity', 'entity.name', 'entity.name.function', 'entity.other.attribute-name.html.vue', 'meta.style'],
         settings: {
           foreground: code.function,
         },
       },
       {
-        scope: 'variable.parameter.function',
+        scope: ['variable.parameter.function', 'text.html.derivative', 'storage.modifier.package', 'storage.modifier.import', 'storage.type.java'],
         settings: {
           foreground: code.foreground,
         },
       },
       {
-        scope: ['entity.name.tag', 'tag.html'],
+        scope: ['entity.name.tag', 'tag.html', 'keyword', 'storage.type.class.jsdoc'],
         settings: {
           foreground: code.keyword,
         },
       },
       {
-        scope: 'entity.name.function',
-        settings: {
-          foreground: code.function,
-        },
-      },
-      {
-        scope: ['keyword', 'storage.type.class.jsdoc'],
-        settings: {
-          foreground: code.keyword,
-        },
-      },
-      {
-        scope: ['storage', 'storage.type', 'support.type.builtin', 'constant.language.undefined', 'constant.language.null'],
+        scope: ['storage', 'storage.type', 'support.type.builtin', 'constant.language.undefined', 'constant.language.null', 'keyword.other.unit'],
         settings: {
           foreground: code.builtin,
         },
       },
       {
-        scope: ['text.html.derivative', 'storage.modifier.package', 'storage.modifier.import', 'storage.type.java'],
-        settings: {
-          foreground: code.foreground,
-        },
-      },
-      {
-        scope: ['string', 'string punctuation.section.embedded source', 'attribute.value'],
+        scope: [
+          'string',
+          'string punctuation.section.embedded source',
+          'attribute.value',
+          'punctuation.definition.string',
+          'string variable',
+          'string.regexp.character-class',
+          'string.regexp constant.character.escape',
+          'string.regexp source.ruby.embedded',
+          'string.regexp string.regexp.arbitrary-repitition',
+          'constant.other.reference.link',
+          'string.other.link',
+          'punctuation.definition.string.begin.markdown',
+          'punctuation.definition.string.end.markdown',
+        ],
         settings: {
           foreground: code.string,
         },
       },
       {
-        scope: ['punctuation.definition.string'],
-        settings: {
-          foreground: code.string,
-        },
-      },
-      {
-        scope: ['punctuation.support.type.property-name'],
-        settings: {
-          foreground: code.property,
-        },
-      },
-      {
-        scope: 'support',
-        settings: {
-          foreground: code.property,
-        },
-      },
-      {
-        scope: ['property', 'meta.property-name', 'meta.object-literal.key', 'entity.name.tag.yaml', 'attribute.name'],
-        settings: {
-          foreground: code.property,
-        },
-      },
-      {
-        scope: ['entity.other.attribute-name', 'invalid.deprecated.entity.other.attribute-name.html'],
+        scope: ['invalid.deprecated.entity.other.attribute-name.html', 'variable', 'identifier'],
         settings: {
           foreground: code.variable,
         },
       },
       {
-        scope: ['variable', 'identifier'],
+        scope: [
+          'punctuation.support.type.property-name',
+          'support',
+          'property',
+          'meta.property-name',
+          'meta.object-literal.key',
+          'entity.name.tag.yaml',
+          'attribute.name',
+          'variable.other.property',
+        ],
         settings: {
-          foreground: code.variable,
+          foreground: code.property,
         },
       },
       {
-        scope: ['support.type.primitive', 'entity.name.type'],
+        scope: ['parameter', 'variable.parameter'],
+        settings: {
+          foreground: code.parameter,
+        },
+      },
+      {
+        scope: ['support.type.primitive'],
         settings: {
           foreground: code.type,
         },
@@ -466,26 +469,9 @@ export function getTheme(name: string) {
         },
       },
       {
-        scope: 'string variable',
-        settings: {
-          foreground: code.string,
-        },
-      },
-      {
         scope: ['source.regexp', 'string.regexp'],
         settings: {
           foreground: code.regex,
-        },
-      },
-      {
-        scope: [
-          'string.regexp.character-class',
-          'string.regexp constant.character.escape',
-          'string.regexp source.ruby.embedded',
-          'string.regexp string.regexp.arbitrary-repitition',
-        ],
-        settings: {
-          foreground: code.string,
         },
       },
       {
@@ -495,21 +481,9 @@ export function getTheme(name: string) {
         },
       },
       {
-        scope: ['support.constant'],
-        settings: {
-          foreground: code.constant,
-        },
-      },
-      {
         scope: ['constant.numeric', 'number'],
         settings: {
           foreground: code.number,
-        },
-      },
-      {
-        scope: ['keyword.other.unit'],
-        settings: {
-          foreground: code.builtin,
         },
       },
       {
@@ -637,17 +611,6 @@ export function getTheme(name: string) {
         },
       },
       {
-        scope: [
-          'constant.other.reference.link',
-          'string.other.link',
-          'punctuation.definition.string.begin.markdown',
-          'punctuation.definition.string.end.markdown',
-        ],
-        settings: {
-          foreground: code.string,
-        },
-      },
-      {
         scope: ['markup.underline.link.markdown'],
         settings: {
           // foreground: secondaryForeground,
@@ -658,12 +621,6 @@ export function getTheme(name: string) {
         scope: ['type.identifier'],
         settings: {
           foreground: code.class,
-        },
-      },
-      {
-        scope: ['entity.other.attribute-name.html.vue'],
-        settings: {
-          foreground: code.function,
         },
       },
       {
