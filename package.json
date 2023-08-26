@@ -23,7 +23,7 @@
   "scripts": {
     "build": "tsx src",
     "format": "prettier --write .",
-    "release": "vsce publish minor",
+    "release": "vsce publish",
     "watch": "tsx watch src"
   },
   "contributes": {
