@@ -1,21 +1,35 @@
 {
-  "name": "glace",
-  "displayName": "Glace",
+  "name": "hibiscus-theme",
+  "displayName": "Hibiscus Theme",
   "version": "0.0.1",
-  "description": "A glace theme",
+  "description": "A warm, cosy, pastel VSCode theme",
+  "icon": "icon.png",
   "categories": [
     "Themes"
   ],
+  "keywords": [
+    "theme",
+    "dark",
+    "warn",
+    "cosy",
+    "pastel"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/colinlienard/hibiscus-theme"
+  },
+  "publisher": "colinlienard",
   "type": "module",
   "scripts": {
     "build": "tsx src",
     "format": "prettier --write .",
+    "release": "vsce publish minor",
     "watch": "tsx watch src"
   },
   "contributes": {
     "themes": [
       {
-        "label": "Glace",
+        "label": "Hibiscus",
         "uiTheme": "vs-dark",
         "path": "./themes/generated.json"
       }
@@ -24,7 +38,8 @@
   "devDependencies": {
     "@types/node": "^20.5.2",
     "prettier": "^3.0.2",
-    "tsx": "^3.12.7"
+    "tsx": "^3.12.7",
+    "vsce": "^2.15.0"
   },
   "engines": {
     "vscode": "^1.81.0"
