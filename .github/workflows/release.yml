@@ -23,4 +23,4 @@ jobs:
       - name: Build
         run: pnpm build
       - name: Publish
-        run: pnpx vsce publish -p ${{ secrets.VCSE_PAT }}
+        run: pnpx vsce publish -p ${{ secrets.VSCE_PAT }}
