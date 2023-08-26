@@ -52,7 +52,7 @@ export function getTheme(name: string) {
       'titleBar.inactiveBackground': ui.background,
       'titleBar.border': ui.border,
 
-      'activityBar.foreground': ui.foregroundLight,
+      'activityBar.foreground': ui.foreground,
       'activityBar.inactiveForeground': ui.foregroundDark,
       'activityBar.background': ui.background,
       'activityBarBadge.foreground': ui.foregroundDarker,
@@ -270,7 +270,7 @@ export function getTheme(name: string) {
       'gitDecoration.deletedResourceForeground': ui.red,
       'gitDecoration.renamedResourceForeground': ui.lightgreen,
       'gitDecoration.stageDeletedResourceForeground': ui.beige,
-      'gitDecoration.untrackedResourceForeground': ui.debug,
+      'gitDecoration.untrackedResourceForeground': ui.green,
       'gitDecoration.ignoredResourceForeground': ui.foregroundDark,
       'gitDecoration.conflictingResourceForeground': ui.orange,
       'gitDecoration.submoduleResourceForeground': ui.debug,
