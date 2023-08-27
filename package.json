@@ -3,7 +3,7 @@
   "displayName": "Hibiscus Theme",
   "version": "0.0.1",
   "description": "A warm, cosy, pastel VSCode theme",
-  "icon": "icon.png",
+  "icon": "assets/icon.png",
   "categories": [
     "Themes"
   ],

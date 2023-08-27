@@ -1,16 +1,32 @@
-# glace README
+<div align="center">
 
-## Working with Markdown
+<img src="https://raw.githubusercontent.com/colinlienard/hibiscus-theme/main/assets/icon.png" height="128px">
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+# Hibiscus
 
-- Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-- Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-- Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+_A warm, cosy, pastel VSCode theme_
 
-## For more information
+[**→ Install now**](https://marketplace.visualstudio.com/items?itemName=colinlienard.hibiscus-theme)
 
-- [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-- [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+</div>
 
-**Enjoy!**
+![](https://raw.githubusercontent.com/colinlienard/hibiscus-theme/main/assets/screenshot.png)
+
+> **Warning**  
+> This theme was originally created for personal use and is currently incomplete.
+
+## Contributing
+
+- Install dependencies with `pnpm install`.
+- Generate the json output once with `pnpm build`, or at each file change with `pnpm watch`.
+- Run the debugger (`F5`).
+- Tweak the colors in `src/colors.ts`.
+- Change where colors are used in `src/theme.ts`. Press `Cmd+Shift+P`, type _Developer: Inspect Editor Tokens and Scopes_ and click on a word in the debugger editor to see its token scope.
+
+## Credits
+
+Lot of inspiration was taken from [**primer/github-vscode-theme**](https://github.com/primer/github-vscode-theme) and [**antfu/vscode-theme-vitesse**](https://github.com/antfu/vscode-theme-vitesse).
+
+## License
+
+[MIT](./LICENSE) © Colin Lienard
