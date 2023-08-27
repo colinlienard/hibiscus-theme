@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/colinlienard/hibiscus-theme/main/assets/icon.png" height="128px">
+<img src="https://raw.githubusercontent.com/colinlienard/hibiscus-theme/main/assets/icon.png?token=GHSAT0AAAAAACFSMCW467CP5F4W2TVNSZICZHLVCYQ" height="128px">
 
 # Hibiscus
 
@@ -10,7 +10,9 @@ _A warm, cosy, pastel VSCode theme_
 
 </div>
 
-![](https://raw.githubusercontent.com/colinlienard/hibiscus-theme/main/assets/screenshot.png)
+![](https://raw.githubusercontent.com/colinlienard/hibiscus-theme/main/assets/screenshot.png?token=GHSAT0AAAAAACFSMCW4OB7C7S5E4J5D5EECZHLVECA)
+
+---
 
 > **Warning**  
 > This theme was originally created for personal use and is currently incomplete.
