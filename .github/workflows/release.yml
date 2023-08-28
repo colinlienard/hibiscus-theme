@@ -37,4 +37,4 @@ jobs:
       - uses: ncipollo/release-action@v1
         with:
           generateReleaseNotes: true
-          tag: github.event.head_commit.message
+          tag: ${{ github.event.head_commit.message }}
