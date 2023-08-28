@@ -2,33 +2,30 @@ name: Release
 on:
   push:
     branches:
-      # - main
-      - ci/github-release
-
+      - main
 jobs:
-  # publish:
-  #   if: contains(github.event.head_commit.message, 'release')
-  #   name: Release
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  # - uses: pnpm/action-setup@v2.2.4
-  #   with:
-  #     version: 8
-  # - name: Use Node.js 18
-  #   uses: actions/setup-node@v3
-  #   with:
-  #     node-version: 18
-  #     cache: 'pnpm'
-  # - name: Install dependencies
-  #   run: pnpm install
-  # - name: Build
-  #   run: pnpm build
-  # - name: Publish
-  #   run: pnpx vsce publish -p ${{ secrets.VSCE_PAT }}
-
+  publish:
+    if: contains(github.event.head_commit.message, 'release')
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 8
+      - name: Use Node.js 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build
+        run: pnpm build
+      - name: Publish
+        run: pnpx vsce publish -p ${{ secrets.VSCE_PAT }}
   github-release:
-    # if: contains(github.event.head_commit.message, 'release')
+    if: contains(github.event.head_commit.message, 'release')
     name: GitHub Release
     runs-on: ubuntu-latest
     permissions:
@@ -41,6 +38,7 @@ jobs:
       - name: Create release
         uses: ncipollo/release-action@v1
         with:
-          name: Hibiscus Theme v${{ steps.package-version.outputs.current-version }}
           generateReleaseNotes: true
+          makeLatest: true
+          name: Hibiscus Theme v${{ steps.package-version.outputs.current-version }}
           tag: hibiscus-theme-v${{ steps.package-version.outputs.current-version }}
