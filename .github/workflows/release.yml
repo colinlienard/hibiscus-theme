@@ -4,7 +4,7 @@ on:
     branches:
       - main
 jobs:
-  release:
+  publish:
     if: contains(github.event.head_commit.message, 'release')
     name: Release
     runs-on: ubuntu-latest
@@ -24,3 +24,21 @@ jobs:
         run: pnpm build
       - name: Publish
         run: pnpx vsce publish -p ${{ secrets.VSCE_PAT }}
+  github-release:
+    if: contains(github.event.head_commit.message, 'release')
+    name: GitHub Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+      - name: Get package version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@v1.3.1
+      - name: Create release
+        uses: ncipollo/release-action@v1
+        with:
+          generateReleaseNotes: true
+          makeLatest: true
+          name: Hibiscus Theme v${{ steps.package-version.outputs.current-version }}
+          tag: hibiscus-theme-v${{ steps.package-version.outputs.current-version }}
