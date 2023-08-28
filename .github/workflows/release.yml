@@ -36,6 +36,4 @@ jobs:
     steps:
       - uses: ncipollo/release-action@v1
         with:
-          commit: github.sha
           generateReleaseNotes: true
-          tag: github.event.head_commit.message
