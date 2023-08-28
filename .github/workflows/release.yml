@@ -34,6 +34,7 @@ jobs:
     permissions:
       contents: write
     steps:
+      - uses: actions/checkout@v3
       - name: Get package version
         id: package-version
         uses: martinbeentjes/npm-get-version-action@v1.3.1
