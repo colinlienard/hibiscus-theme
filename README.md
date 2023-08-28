@@ -1,16 +1,17 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/colinlienard/hibiscus-theme/main/assets/icon.png?token=GHSAT0AAAAAACFSMCW467CP5F4W2TVNSZICZHLVCYQ" height="128px">
+<img src="https://raw.githubusercontent.com/colinlienard/hibiscus-theme/main/assets/icon.png" height="128px">
 
 # Hibiscus
 
 _A warm, cosy, pastel VSCode theme_
 
-[**→ Install now**](https://marketplace.visualstudio.com/items?itemName=colinlienard.hibiscus-theme)
+| ![Latest release](https://img.shields.io/github/v/release/colinlienard/hibiscus-theme?logo=github&label=%20&color=%2357b084) | [**→ Install now**](https://marketplace.visualstudio.com/items?itemName=colinlienard.hibiscus-theme) |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 
 </div>
 
-![](https://raw.githubusercontent.com/colinlienard/hibiscus-theme/main/assets/screenshot.png?token=GHSAT0AAAAAACFSMCW4OB7C7S5E4J5D5EECZHLVECA)
+![](https://raw.githubusercontent.com/colinlienard/hibiscus-theme/main/assets/screenshot.png)
 
 ---
 
