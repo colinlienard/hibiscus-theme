@@ -6,8 +6,9 @@
 
 _A warm, cosy, pastel VSCode theme_
 
-| ![Latest release](https://img.shields.io/github/v/release/colinlienard/hibiscus-theme?logo=github&label=%20&color=%2357b084) | [**→ Install now**](https://marketplace.visualstudio.com/items?itemName=colinlienard.hibiscus-theme) |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+![](https://img.shields.io/visual-studio-marketplace/v/colinlienard.hibiscus-theme?color=seagreen)
+
+[**→ Install now**](https://marketplace.visualstudio.com/items?itemName=colinlienard.hibiscus-theme)
 
 </div>
 
