@@ -34,7 +34,12 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: ncipollo/release-action@v1
+      - name: Get package version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@v1.3.1
+      - name: Create release
+        uses: ncipollo/release-action@v1
         with:
+          name: Hibiscus Theme v${{ steps.package-version.outputs.current-version }}
           generateReleaseNotes: true
-          tag: ${{ github.event.head_commit.message }}
+          tag: hibiscus-theme-v${{ steps.package-version.outputs.current-version }}
