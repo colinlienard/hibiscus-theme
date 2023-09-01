@@ -152,26 +152,22 @@ export function getTheme(name: string) {
       'editor.inactiveSelectionBackground': ui.backgroundDark,
       'editor.selectionBackground': ui.backgroundLighter,
       'editor.selectionHighlightBackground': ui.backgroundLighter,
-      'editor.wordHighlightBackground': ui.backgroundBright,
-      'editor.wordHighlightBorder': ui.transparent,
-      'editor.wordHighlightStrongBackground': ui.backgroundLighter,
-      'editor.wordHighlightStrongBorder': ui.borderLighter,
+      'editor.wordHighlightBackground': ui.transparent,
+      'editor.wordHighlightBorder': ui.borderLighter,
+      'editor.wordHighlightStrongBackground': ui.transparent,
+      'editor.wordHighlightStrongBorder': ui.borderBright,
       'editorBracketMatch.background': ui.backgroundLighter,
       'editorBracketMatch.border': ui.borderLighter,
 
-      'editorInlayHint.background': ui.debug,
-      'editorInlayHint.foreground': ui.debug,
-      'editorInlayHint.typeBackground': ui.debug,
-      'editorInlayHint.typeForeground': ui.debug,
-      'editorInlayHint.paramBackground': ui.debug,
-      'editorInlayHint.paramForeground': ui.debug,
+      'editorInlayHint.background': alpha(ui.blue, 30),
+      'editorInlayHint.foreground': ui.foreground,
 
       'editorGutter.modifiedBackground': ui.blue,
       'editorGutter.addedBackground': ui.green,
       'editorGutter.deletedBackground': ui.red,
 
-      'diffEditor.insertedTextBackground': alpha(ui.green, 30),
-      'diffEditor.removedTextBackground': alpha(ui.red, 30),
+      'diffEditor.insertedTextBackground': alpha(ui.green, 50),
+      'diffEditor.removedTextBackground': alpha(ui.red, 50),
 
       'scrollbar.shadow': ui.transparent,
       'scrollbarSlider.background': alpha(ui.backgroundBright, 50),
@@ -179,9 +175,9 @@ export function getTheme(name: string) {
       'scrollbarSlider.activeBackground': alpha(ui.backgroundBright, 90),
       'editorOverviewRuler.border': ui.border,
 
-      // 'minimapSlider.background': lightDark(alpha(scale.gray[4], 0.2), alpha(scale.gray[3], 0.2)),
-      // 'minimapSlider.hoverBackground': lightDark(alpha(scale.gray[4], 0.24), alpha(scale.gray[3], 0.24)),
-      // 'minimapSlider.activeBackground': lightDark(alpha(scale.gray[4], 0.28), alpha(scale.gray[3], 0.28)),
+      'minimapSlider.background': alpha(ui.backgroundBright, 50),
+      'minimapSlider.hoverBackground': alpha(ui.backgroundBright, 70),
+      'minimapSlider.activeBackground': alpha(ui.backgroundBright, 90),
 
       'panel.background': ui.background,
       'panel.border': ui.border,
@@ -259,11 +255,11 @@ export function getTheme(name: string) {
 
       'editorBracketHighlight.foreground1': code.type,
       'editorBracketHighlight.foreground2': code.builtin,
-      'editorBracketHighlight.foreground3': code.variable,
+      'editorBracketHighlight.foreground3': code.constant,
       'editorBracketHighlight.unexpectedBracket.foreground': ui.foregroundDark,
 
       'editorError.foreground': ui.red,
-      'editorWarning.foreground': ui.orange,
+      'editorWarning.foreground': ui.yellow,
       'editorInfo.foreground': ui.blue,
       'editorHint.foreground': ui.green,
 
@@ -277,11 +273,11 @@ export function getTheme(name: string) {
       'gitDecoration.conflictingResourceForeground': ui.orange,
       'gitDecoration.submoduleResourceForeground': ui.debug,
 
-      // 'debugToolBar.background': color.canvas.overlay,
-      // 'editor.stackFrameHighlightBackground': color.attention.muted,
-      // 'editor.focusedStackFrameHighlightBackground': color.success.muted,
+      'debugToolBar.background': ui.background,
+      'editor.stackFrameHighlightBackground': ui.yellow,
+      'editor.focusedStackFrameHighlightBackground': ui.yellow,
 
-      'peekView.border': ui.borderLight,
+      'peekView.border': ui.borderLighter,
       'peekViewEditor.background': ui.background,
       'peekViewEditor.matchHighlightBackground': ui.backgroundLighter,
       'peekViewResult.background': ui.background,
@@ -333,16 +329,25 @@ export function getTheme(name: string) {
           'entity.name.constant',
           'variable.language',
           'meta.definition.variable',
-          'entity.other.attribute-name',
           'variable.other.constant',
           'support.constant',
+          'entity.name.type.svelte',
+          'entity.other.attribute-name.html.vue',
         ],
         settings: {
           foreground: code.constant,
         },
       },
       {
-        scope: ['entity', 'entity.name', 'entity.name.function', 'entity.other.attribute-name.html.vue', 'meta.style'],
+        scope: [
+          'entity',
+          'entity.name',
+          'entity.name.function',
+          'meta.style',
+          'entity.name.type.class',
+          'support.class.component',
+          'meta.property-value',
+        ],
         settings: {
           foreground: code.function,
         },
@@ -360,7 +365,15 @@ export function getTheme(name: string) {
         },
       },
       {
-        scope: ['storage', 'storage.type', 'support.type.builtin', 'constant.language.undefined', 'constant.language.null', 'keyword.other.unit'],
+        scope: [
+          'storage',
+          'storage.type',
+          'support.type.builtin',
+          'constant.language.undefined',
+          'constant.language.null',
+          'keyword.other.unit',
+          'entity.other.attribute-name.class.css',
+        ],
         settings: {
           foreground: code.builtin,
         },
@@ -394,13 +407,13 @@ export function getTheme(name: string) {
       {
         scope: [
           'punctuation.support.type.property-name',
-          'support',
           'property',
           'meta.property-name',
           'meta.object-literal.key',
           'entity.name.tag.yaml',
           'attribute.name',
           'variable.other.property',
+          'entity.other.attribute-name',
         ],
         settings: {
           foreground: code.property,
@@ -413,7 +426,7 @@ export function getTheme(name: string) {
         },
       },
       {
-        scope: ['support.type.primitive'],
+        scope: ['support.type.primitive', 'entity.name.type', 'support.function.misc'],
         settings: {
           foreground: code.type,
         },
@@ -425,7 +438,7 @@ export function getTheme(name: string) {
         },
       },
       {
-        scope: ['keyword.operator', 'keyword.operator.assignment.compound', 'meta.var.expr.ts'],
+        scope: ['keyword.operator.assignment.compound', 'meta.var.expr.ts'],
         settings: {
           foreground: code.operator,
         },
