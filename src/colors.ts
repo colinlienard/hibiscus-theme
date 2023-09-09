@@ -19,7 +19,8 @@ export const ui = {
   foregroundDarker: '#3B4043',
   foregroundDark: '#58656c',
   foreground: '#9fabb1',
-  foregroundLight: '#ffffff',
+  foregroundLight: '#d6dfe4',
+  foregroundLighter: '#ffffff',
 
   red: '#c16565',
   orange: '#d78b7b',
@@ -27,7 +28,9 @@ export const ui = {
   yellow: '#d4af6f',
   lightgreen: '#8bc7a9',
   green: '#46a475',
+  cyan: '#53b8b0',
   blue: '#5696c4',
+  magenta: '#9a88d2',
 
   transparent: '#00000000',
   debug: '#ff0000',
