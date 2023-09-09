@@ -81,7 +81,7 @@ export function getTheme(name: string) {
       'list.inactiveFocusBackground': ui.background,
       'list.highlightForeground': ui.secondaryLight,
 
-      'tree.indentGuidesStroke': ui.borderLight,
+      'tree.indentGuidesStroke': ui.border,
 
       'notificationCenterHeader.foreground': ui.foreground,
       'notificationCenterHeader.background': ui.background,
@@ -136,12 +136,12 @@ export function getTheme(name: string) {
       'editor.foreground': ui.foreground,
       'editor.background': ui.background,
       'editorWidget.background': ui.background,
-      'editor.foldBackground': alpha(ui.debug, 50),
+      'editor.foldBackground': ui.backgroundLight,
       'editor.lineHighlightBackground': ui.backgroundLight,
       'editor.lineHighlightBorder': ui.transparent,
       'editorLineNumber.foreground': ui.foregroundDarker,
       'editorLineNumber.activeForeground': ui.foreground,
-      'editorIndentGuide.background': ui.borderLight,
+      'editorIndentGuide.background': ui.border,
       'editorIndentGuide.activeBackground': ui.borderLighter,
       'editorWhitespace.foreground': ui.foregroundDarker,
       'editorCursor.foreground': ui.foreground,
@@ -407,6 +407,7 @@ export function getTheme(name: string) {
       {
         scope: [
           'punctuation.support.type.property-name',
+          'support.type.property-name',
           'property',
           'meta.property-name',
           'meta.object-literal.key',
@@ -432,7 +433,7 @@ export function getTheme(name: string) {
         },
       },
       {
-        scope: 'namespace',
+        scope: ['namespace', 'entity.name.namespace'],
         settings: {
           foreground: code.namespace,
         },
