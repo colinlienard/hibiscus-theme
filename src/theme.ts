@@ -166,8 +166,8 @@ export function getTheme(name: string) {
       'editorGutter.addedBackground': ui.green,
       'editorGutter.deletedBackground': ui.red,
 
-      'diffEditor.insertedTextBackground': alpha(ui.green, 50),
-      'diffEditor.removedTextBackground': alpha(ui.red, 50),
+      'diffEditor.insertedTextBackground': alpha(ui.green, 30),
+      'diffEditor.removedTextBackground': alpha(ui.red, 30),
 
       'scrollbar.shadow': ui.transparent,
       'scrollbarSlider.background': alpha(ui.backgroundBright, 50),
@@ -235,23 +235,23 @@ export function getTheme(name: string) {
       // 'symbolIcon.variableForeground': lightDark(scale.orange[6], scale.orange[3]),
       // 'symbolIcon.constantForeground': lightDark(scale.green[6], scale.green),
 
-      // 'terminal.foreground': color.fg.default,
-      // 'terminal.ansiBlack': color.ansi.black,
-      // 'terminal.ansiRed': color.ansi.red,
-      // 'terminal.ansiGreen': color.ansi.green,
-      // 'terminal.ansiYellow': color.ansi.yellow,
-      // 'terminal.ansiBlue': color.ansi.blue,
-      // 'terminal.ansiMagenta': color.ansi.magenta,
-      // 'terminal.ansiCyan': color.ansi.cyan,
-      // 'terminal.ansiWhite': color.ansi.white,
-      // 'terminal.ansiBrightBlack': color.ansi.blackBright,
-      // 'terminal.ansiBrightRed': color.ansi.redBright,
-      // 'terminal.ansiBrightGreen': color.ansi.greenBright,
-      // 'terminal.ansiBrightYellow': color.ansi.yellowBright,
-      // 'terminal.ansiBrightBlue': color.ansi.blueBright,
-      // 'terminal.ansiBrightMagenta': color.ansi.magentaBright,
-      // 'terminal.ansiBrightCyan': color.ansi.cyanBright,
-      // 'terminal.ansiBrightWhite': color.ansi.whiteBright,
+      'terminal.foreground': ui.foreground,
+      'terminal.ansiBlack': ui.backgroundDark,
+      'terminal.ansiRed': adjustColor(ui.red, -40),
+      'terminal.ansiGreen': adjustColor(ui.green, -40),
+      'terminal.ansiYellow': adjustColor(ui.yellow, -40),
+      'terminal.ansiBlue': adjustColor(ui.blue, -40),
+      'terminal.ansiMagenta': adjustColor(ui.magenta, -40),
+      'terminal.ansiCyan': adjustColor(ui.cyan, -40),
+      'terminal.ansiWhite': ui.foregroundLight,
+      'terminal.ansiBrightBlack': ui.backgroundLight,
+      'terminal.ansiBrightRed': ui.red,
+      'terminal.ansiBrightGreen': ui.green,
+      'terminal.ansiBrightYellow': ui.yellow,
+      'terminal.ansiBrightBlue': ui.blue,
+      'terminal.ansiBrightMagenta': ui.magenta,
+      'terminal.ansiBrightCyan': ui.cyan,
+      'terminal.ansiBrightWhite': ui.foregroundLight,
 
       'editorBracketHighlight.foreground1': code.type,
       'editorBracketHighlight.foreground2': code.builtin,
@@ -652,6 +652,26 @@ export function getTheme(name: string) {
   };
 }
 
-function alpha(color: string, alpha: number) {
-  return `${color}${alpha}`;
+function alpha(hex: string, alpha: number) {
+  return `${hex}${alpha}`;
+}
+
+function adjustColor(color: string, amount: number) {
+  color = color.slice(1);
+
+  const num = parseInt(color, 16);
+
+  let r = (num >> 16) + amount;
+  if (r > 255) r = 255;
+  else if (r < 0) r = 0;
+
+  let b = ((num >> 8) & 0x00ff) + amount;
+  if (b > 255) b = 255;
+  else if (b < 0) b = 0;
+
+  let g = (num & 0x0000ff) + amount;
+  if (g > 255) g = 255;
+  else if (g < 0) g = 0;
+
+  return '#' + (g | (b << 8) | (r << 16)).toString(16);
 }
