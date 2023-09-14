@@ -21,13 +21,13 @@ _A warm, cosy, pastel VSCode theme_
 
 ## Contributing
 
-- Install dependencies with `pnpm install`.
-- Generate the json output once with `pnpm build`, or at each file change with `pnpm watch`.
+- Install dependencies with `bun install`.
+- Generate the json output once with `bun dev`, or at each file change with `bun watch`.
 - Run the debugger (`F5`).
 - Tweak the colors in `src/colors.ts`.
 - Change where colors are used in `src/theme.ts`. Press `Cmd+Shift+P`, type _Developer: Inspect Editor Tokens and Scopes_ and click on a word in the debugger editor to see its token scope.
 
-## Credits
+## Inspiration
 
 Lot of inspiration was taken from [**primer/github-vscode-theme**](https://github.com/primer/github-vscode-theme) and [**antfu/vscode-theme-vitesse**](https://github.com/antfu/vscode-theme-vitesse).
 
