@@ -8,7 +8,7 @@ _A warm, cosy, pastel VSCode theme_
 
 ![](https://img.shields.io/visual-studio-marketplace/v/colinlienard.hibiscus-theme?color=seagreen)
 
-<a href="https://marketplace.visualstudio.com/items?itemName=colinlienard.hibiscus-theme" target="_blank" style="color: #57b084"><b>→ Install now</b></a>
+<a href="https://marketplace.visualstudio.com/items?itemName=colinlienard.hibiscus-theme" style="color: #57b084 !important"><b>→ Install now</b></a>
 
 </div>
 
