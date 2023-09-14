@@ -19,11 +19,10 @@
     "url": "https://github.com/colinlienard/hibiscus-theme"
   },
   "publisher": "colinlienard",
-  "type": "module",
   "scripts": {
-    "build": "tsx src",
+    "dev": "bun src/index.ts",
     "format": "prettier --write .",
-    "watch": "tsx watch src"
+    "watch": "bun --watch run src/index.ts"
   },
   "contributes": {
     "themes": [
@@ -35,9 +34,9 @@
     ]
   },
   "devDependencies": {
-    "@types/node": "^20.5.2",
+    "bun-types": "latest",
     "prettier": "^3.0.2",
-    "tsx": "^3.12.7",
+    "typescript": "^5.2.2",
     "vsce": "^2.15.0"
   },
   "engines": {
