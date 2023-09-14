@@ -9,21 +9,14 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2.2.4
-        with:
-          version: 8
-      - name: Use Node.js 18
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: 'pnpm'
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
       - name: Install dependencies
-        run: pnpm install
-      - name: Build
-        run: pnpm build
+        run: bun install
+      - name: Generate
+        run: bun dev
       - name: Publish
-        run: pnpx vsce publish -p ${{ secrets.VSCE_PAT }}
+        run: bunx vsce publish -p ${{ secrets.VSCE_PAT }}
   github-release:
     if: contains(github.event.head_commit.message, 'release')
     name: GitHub Release
@@ -31,7 +24,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Get package version
         id: package-version
         uses: martinbeentjes/npm-get-version-action@v1.3.1
