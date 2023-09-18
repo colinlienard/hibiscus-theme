@@ -147,7 +147,7 @@ export function getTheme(name: string) {
       'editorCursor.foreground': ui.foreground,
 
       'editor.findMatchBackground': ui.backgroundBright,
-      'editor.findMatchHighlightBackground': ui.backgroundBright,
+      'editor.findMatchHighlightBackground': alpha(ui.primary, 50),
       'editor.linkedEditingBackground': ui.backgroundDark,
       'editor.inactiveSelectionBackground': ui.backgroundDark,
       'editor.selectionBackground': ui.backgroundLighter,
@@ -256,7 +256,7 @@ export function getTheme(name: string) {
       'editorBracketHighlight.foreground1': code.type,
       'editorBracketHighlight.foreground2': code.builtin,
       'editorBracketHighlight.foreground3': code.constant,
-      'editorBracketHighlight.unexpectedBracket.foreground': ui.foregroundDark,
+      'editorBracketHighlight.unexpectedBracket.foreground': ui.foreground,
 
       'editorError.foreground': ui.red,
       'editorWarning.foreground': ui.yellow,
@@ -421,7 +421,7 @@ export function getTheme(name: string) {
         },
       },
       {
-        scope: ['parameter', 'variable.parameter'],
+        scope: ['parameter', 'variable.parameter', 'support.constant.property-value.css'],
         settings: {
           foreground: code.parameter,
         },
